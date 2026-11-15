@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temperature Converter</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#e9f1f7;font-family:"Segoe UI",Arial,sans-serif}
+  .box{background:#fff;padding:32px;border-radius:12px;width:min(92%,380px);box-shadow:0 6px 24px rgba(0,0,0,.12)}
+  h1{margin:0 0 20px;font-size:1.5rem;text-align:center;color:#17445f}
+  label{display:block;margin:12px 0 4px;font-weight:600}
+  input,select,button{width:100%;padding:11px;font-size:1rem;border:1px solid #b9c7d3;border-radius:6px}
+  button{background:#17445f;color:#fff;border:none;margin-top:18px;cursor:pointer;font-weight:bold}
+  button:hover{background:#0f2f43}
+  #error{color:#c0392b;min-height:22px;margin-top:10px;font-size:.95rem}
+  #result{margin-top:10px;background:#f3f8fb;border-radius:6px;padding:12px}
+  #result p{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Temperature Converter</h1>
+  <label for="temp">Temperature value</label>
+  <input type="text" id="temp" placeholder="e.g. 25">
+  <label for="unit">Convert from</label>
+  <select id="unit">
+    <option value="C">Celsius (°C)</option>
+    <option value="F">Fahrenheit (°F)</option>
+    <option value="K">Kelvin (K)</option>
+  </select>
+  <button id="convertBtn">Convert</button>
+  <div id="error"></div>
+  <div id="result"></div>
+</div>
+
+<script>
+  const tempInput = document.getElementById("temp");
+  const unitSelect = document.getElementById("unit");
+  const errorBox = document.getElementById("error");
+  const resultBox = document.getElementById("result");
+
+  function convert() {
+    errorBox.textContent = "";
+    resultBox.innerHTML = "";
+    const raw = tempInput.value.trim();
+
+    if (raw === "" || isNaN(raw)) {
+      errorBox.textContent = "Please enter a valid number.";
+      return;
+    }
+    const value = parseFloat(raw);
+    const unit = unitSelect.value;
+
+    // Convert everything to Celsius first
+    let c;
+    if (unit === "C") c = value;
+    else if (unit === "F") c = (value - 32) * 5 / 9;
+    else c = value - 273.15;
+
+    // Absolute zero check
+    if (c < -273.15) {
+      errorBox.textContent = "Temperature cannot be below absolute zero (-273.15°C, -459.67°F, 0 K).";
+      return;
+    }
+
+    const f = c * 9 / 5 + 32;
+    const k = c + 273.15;
+    resultBox.innerHTML =
+      "<p><strong>Celsius:</strong> " + c.toFixed(2) + " °C</p>" +
+      "<p><strong>Fahrenheit:</strong> " + f.toFixed(2) + " °F</p>" +
+      "<p><strong>Kelvin:</strong> " + k.toFixed(2) + " K</p>";
+  }
+
+  document.getElementById("convertBtn").addEventListener("click", convert);
+  tempInput.addEventListener("keydown", e => { if (e.key === "Enter") convert(); });
+</script>
+</body>
+</html>
 
