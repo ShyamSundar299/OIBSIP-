@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dodla Shyam Sundar – Portfolio</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#0f1720;--panel:#18222e;--line:#2a3948;--accent:#4fd1c5;--text:#e8eef4;--muted:#a3b3c3}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+  header{position:sticky;top:0;z-index:10;background:rgba(15,23,32,.96);display:flex;justify-content:space-between;align-items:center;padding:14px 6%;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:6px}
+  .brand{font-weight:bold;color:var(--accent);font-size:1.2rem}
+  header nav a{color:var(--text);text-decoration:none;margin-left:18px;font-size:.95rem}
+  header nav a:hover{color:var(--accent)}
+  section{padding:80px 6%;max-width:1000px;margin:auto}
+  h2{font-size:1.8rem;margin-bottom:28px;color:var(--accent)}
+  #home{display:flex;align-items:center;gap:40px;min-height:80vh;flex-wrap:wrap}
+  .avatar{width:190px;height:190px;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:4rem;font-weight:bold;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  #home h1{font-size:2.6rem;line-height:1.2}
+  .role{color:var(--accent);font-size:1.25rem;margin:6px 0 10px}
+  .tag{color:var(--muted);max-width:480px;margin-bottom:20px}
+  .btn{display:inline-block;background:var(--accent);color:var(--bg);padding:12px 26px;border-radius:6px;text-decoration:none;font-weight:bold;margin:0 10px 8px 0}
+  .btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+  .skill-group{margin-bottom:22px}
+  .skill-group h3{font-size:1rem;color:var(--muted);margin-bottom:10px;font-weight:600}
+  .skills{display:flex;flex-wrap:wrap;gap:10px}
+  .skill{background:var(--panel);border:1px solid var(--line);padding:8px 16px;border-radius:20px;font-size:.95rem}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+  .card{background:var(--panel);padding:24px;border-radius:10px;border:1px solid var(--line)}
+  .card h3{margin-bottom:4px}
+  .meta{color:var(--accent);font-size:.85rem;margin-bottom:10px}
+  .card p,.card li{color:var(--muted);font-size:.95rem}
+  .card ul{padding-left:18px;margin-bottom:12px}
+  .card a{color:var(--accent)}
+  .xp{border-left:3px solid var(--accent);padding-left:20px;margin-bottom:26px}
+  .xp h3{font-size:1.1rem}
+  .xp ul{padding-left:18px;color:var(--muted)}
+  a.link{color:var(--accent)}
+  .links a{margin-right:18px;color:var(--accent)}
+  footer{text-align:center;padding:24px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+  @media(max-width:600px){header{justify-content:center}header nav a{margin:0 8px}#home{text-align:center;justify-content:center}#home h1{font-size:2rem}}
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">DSS</span>
+  <nav>
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home">
+  <!-- To use your photo: replace the text DS with <img src="photo.jpg" alt="Shyam Sundar"> and put photo.jpg in this folder -->
+  <div class="avatar">DS</div>
+  <div>
+    <h1>Dodla Shyam Sundar</h1>
+    <p class="role">Machine Learning &amp; Full Stack Developer</p>
+    <p class="tag">I build AI-based and web applications with Python, TensorFlow, PyTorch and Flask.</p>
+    <a href="#projects" class="btn">View my projects</a>
+    <a href="#contact" class="btn alt">Contact me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <p>I am a Computer Science graduate (B.Tech, 2025) with hands-on experience in Machine Learning, Deep Learning and full stack web development. I currently work as a Data Annotator in the automotive domain, labelling data for perception and object detection models used in autonomous driving. Outside work I coordinate community activities as an NSS volunteer and enjoy hackathons and building projects.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill-group"><h3>Languages</h3><div class="skills">
+    <span class="skill">Python</span><span class="skill">Java</span><span class="skill">JavaScript</span><span class="skill">SQL (MySQL)</span><span class="skill">HTML5</span><span class="skill">CSS3</span></div></div>
+  <div class="skill-group"><h3>Frameworks &amp; Libraries</h3><div class="skills">
+    <span class="skill">Flask</span><span class="skill">TensorFlow</span><span class="skill">PyTorch</span><span class="skill">Scikit-Learn</span><span class="skill">OpenCV</span><span class="skill">MediaPipe</span><span class="skill">NumPy</span><span class="skill">Bootstrap</span></div></div>
+  <div class="skill-group"><h3>Tools &amp; Domains</h3><div class="skills">
+    <span class="skill">Git &amp; GitHub</span><span class="skill">VS Code</span><span class="skill">Machine Learning</span><span class="skill">Deep Learning</span><span class="skill">Data Annotation</span><span class="skill">CRUD Apps</span></div></div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="xp"><h3>Data Annotator – ADEPT (Automotive)</h3><p class="meta">Sep 2025 – Present</p>
+    <ul><li>Annotate automotive AI datasets using 2D image linking and 3D bounding boxes.</li><li>Map objects across 2D images and 3D annotations for perception model training.</li></ul></div>
+  <div class="xp"><h3>Full Stack Development Intern – BlackBucks</h3><p class="meta">Dec 2024 – Mar 2025</p>
+    <ul><li>Built responsive web pages with HTML5, CSS3 and JavaScript connected to backend APIs.</li><li>Worked on backend communication and deployment setup.</li></ul></div>
+  <div class="xp"><h3>Deep Learning Intern – Skill Dizire</h3><p class="meta">Jun 2024 – Jul 2024</p>
+    <ul><li>Built ANN, CNN and RNN models in TensorFlow and PyTorch.</li><li>Tuned hyperparameters, improving test classification accuracy by 12%.</li></ul></div>
+  <div class="xp"><h3>Machine Learning Intern – Codegnan</h3><p class="meta">May 2023 – Jul 2023</p>
+    <ul><li>Built end-to-end ML pipelines: preprocessing, feature engineering and validation.</li><li>Deployed Flask prediction services that handled 1,000+ test requests.</li></ul></div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card"><h3>Malpractice Detection System</h3><p class="meta">Flask · OpenCV · MediaPipe · NumPy</p>
+      <p>Real-time proctoring app for online exams with multi-face tracking, gaze monitoring and object detection.</p><br>
+      <a href="https://github.com/ShyamSundar299" target="_blank" rel="noopener">View on GitHub</a></div>
+    <div class="card"><h3>Image Caption Generator</h3><p class="meta">TensorFlow · PyTorch · CNN · LSTM</p>
+      <p>CNN-LSTM encoder-decoder that writes descriptions for images, trained on MS COCO (100,000+ images) with competitive BLEU scores.</p><br>
+      <a href="https://github.com/ShyamSundar299" target="_blank" rel="noopener">View on GitHub</a></div>
+    <div class="card"><h3>To-Do List Web App</h3><p class="meta">ASP.NET Core · C# · Bootstrap</p>
+      <p>Task manager to add, complete and delete tasks, organised into Models, Services and Pages.</p><br>
+      <a href="https://github.com/ShyamSundar299" target="_blank" rel="noopener">View on GitHub</a></div>
+    <div class="card"><h3>Stock Price Forecasting</h3><p class="meta">Python · Scikit-Learn · Flask</p>
+      <p>Time-series models predicting stock movements, with a Flask dashboard showing predictions in real time.</p><br>
+      <a href="https://github.com/ShyamSundar299" target="_blank" rel="noopener">View on GitHub</a></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Vijayawada, India<br>Email: <a class="link" href="mailto:shyamnihal299@gmail.com">shyamnihal299@gmail.com</a></p>
+  <p class="links" style="margin-top:14px">
+    <a href="https://linkedin.com/in/d-shyamsundar-6598a5266" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/ShyamSundar299" target="_blank" rel="noopener">GitHub</a>
+  </p>
+</section>
+
+<footer>© 2026 Dodla Shyam Sundar</footer>
+</body>
+</html>
 
