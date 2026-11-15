@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brewline – Specialty Coffee Subscription</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#1f2a24;--leaf:#2f6b4f;--mint:#e4f1e8;--sun:#f2b84b;--paper:#fbfaf6}
+  html{scroll-behavior:smooth}
+  body{font-family:"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+  h1,h2,h3{font-family:Georgia,serif;line-height:1.2}
+  nav{position:sticky;top:0;z-index:10;background:var(--ink);display:flex;justify-content:space-between;align-items:center;padding:14px 5%}
+  nav .logo{color:var(--sun);font-family:Georgia,serif;font-size:1.4rem;font-weight:bold}
+  nav ul{display:flex;gap:24px;list-style:none}
+  nav a{color:#fff;text-decoration:none;font-size:1rem}
+  nav a:hover{color:var(--sun)}
+  .hero{background:var(--leaf);color:#fff;text-align:center;padding:100px 6%}
+  .hero h1{font-size:3rem;max-width:760px;margin:0 auto 16px}
+  .hero p{font-size:1.2rem;max-width:560px;margin:0 auto 32px}
+  .btn{display:inline-block;background:var(--sun);color:var(--ink);padding:14px 34px;border-radius:6px;font-weight:bold;text-decoration:none}
+  .btn:hover{background:#fff}
+  section{padding:70px 6%}
+  section h2{font-size:2rem;text-align:center;margin-bottom:40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;max-width:1000px;margin:auto}
+  .card{background:var(--mint);padding:28px;border-radius:10px}
+  .card h3{font-size:1.2rem;margin-bottom:8px;color:var(--leaf)}
+  #about{background:#fff}
+  #about p{max-width:680px;margin:0 auto 14px;text-align:center}
+  .quote{background:#fff;border-left:5px solid var(--sun);padding:22px}
+  footer{background:var(--ink);color:#ccc;text-align:center;padding:36px 6%}
+  footer a{color:var(--sun);margin:0 10px;text-decoration:none}
+  @media(max-width:600px){nav{flex-direction:column;gap:8px}.hero h1{font-size:2.1rem}.hero{padding:70px 6%}}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">Brewline</span>
+  <ul>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <h1>Fresh-roasted coffee at your door every month</h1>
+  <p>Beans from small farms, roasted within 48 hours of shipping. Pause or cancel any time.</p>
+  <a href="#features" class="btn">Start my subscription</a>
+</header>
+
+<section id="features">
+  <h2>Why people switch to Brewline</h2>
+  <div class="grid">
+    <div class="card"><h3>Roasted to order</h3><p>Your bag is roasted after you order, so it arrives at its peak.</p></div>
+    <div class="card"><h3>Direct from farms</h3><p>We pay farmers fairly and share who grew your beans.</p></div>
+    <div class="card"><h3>Your schedule</h3><p>Weekly, fortnightly or monthly. Skip a delivery with one click.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Brewline</h2>
+  <p>Brewline started in a small kitchen with one question: why is great coffee so hard to find at home?</p>
+  <p>Today we work with 20 farms and ship across the country, with the same focus on freshness we began with.</p>
+</section>
+
+<section id="reviews">
+  <h2>What customers say</h2>
+  <div class="grid">
+    <div class="quote">“The best morning coffee I've had without leaving home.” <br><strong>– Asha R.</strong></div>
+    <div class="quote">“Deliveries are on time and the flavour notes are spot on.” <br><strong>– Karthik M.</strong></div>
+  </div>
+</section>
+
+<footer>
+  <p>Contact: hello@brewline.example | +91 00000 00000</p>
+  <p style="margin-top:10px"><a href="#">Instagram</a><a href="#">Twitter</a><a href="#">LinkedIn</a></p>
+  <p style="margin-top:10px;font-size:.85rem">© 2026 Brewline. All rights reserved.</p>
+</footer>
+</body>
+</html>
